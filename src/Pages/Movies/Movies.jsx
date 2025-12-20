@@ -1,8 +1,7 @@
 import axios from 'axios';
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { BiSearch } from "react-icons/bi";
-import { BiMovie } from "react-icons/bi";
+import { BiSearch, BiMovie } from "react-icons/bi";
 
 
 
@@ -47,16 +46,16 @@ const Movies = () => {
   return (
     <>
       {/* Loading Spinner */}
-      {loading && (
-        <div className="flex flex-col justify-center items-center h-96">
-          <BiMovie className="text-6xl text-blue-500 animate-bounce" />
-          <p className="mt-4 text-white text-lg font-semibold text-center">
-            Loading...
-          </p>
-        </div>
-      )}
+      {/* {loading && (
+        
+      )} */}
 
-      {!loading && <div className="mt-10 px-4">
+      {loading ? <div className="flex flex-col justify-center items-center h-96">
+        <BiMovie className="text-6xl text-blue-500 animate-bounce" />
+        <p className="mt-4 text-white text-lg font-semibold text-center">
+          Loading...
+        </p>
+      </div> : <div className="mt-10 px-4">
         {/* Search */}
         <div className="search flex justify-center">
           <div className="relative w-full max-w-xl">
