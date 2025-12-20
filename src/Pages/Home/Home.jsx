@@ -4,6 +4,7 @@ import TrendingMovies from '../../Components/TrendingMovies/TrendingMovies'
 import TrendingPeople from '../../Components/TrendingPeople/TrendingPeople'
 
 const Home = () => {
+
     return (
         <>
             <MainSlider />

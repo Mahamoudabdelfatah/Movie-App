@@ -6,7 +6,7 @@ const Notfound = () => {
   return (
     <div className="h-screen flex flex-col items-center justify-center text-white px-4">
 
-      <h1 className="text-9xl font-extrabold tracking-widest text-red-600">
+      <h1 className="text-9xl font-extrabold tracking-widest text-blue-600">
         404
       </h1>
 
@@ -20,7 +20,7 @@ const Notfound = () => {
 
       <Link
         to="/"
-        className="mt-6 px-8 py-3 bg-red-600 hover:bg-red-500 transition rounded-lg text-lg font-semibold"
+        className="mt-6 px-8 py-3 bg-blue-600 hover:bg-blue-500 transition rounded-lg text-lg font-semibold"
       >
         Go Home
       </Link>
