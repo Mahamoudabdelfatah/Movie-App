@@ -7,6 +7,8 @@ import TvShow from "./Pages/TvShow/TvShow"
 import People from "./Pages/People/People"
 import Contact from "./Pages/Contact/Contact"
 import About from "./Pages/About/About"
+import MovieDetailes from "./Components/MovieDetailes/MovieDetailes"
+import PeopleDetailes from "./Components/PeopleDetailes/PeopleDetailes"
 
 
 
@@ -17,8 +19,10 @@ let routes = createBrowserRouter([
     path: "", element: <Layout />, children: [
       { index: true, element: <Home /> },
       { path: "movies", element: <Movies /> },
+      { path: "moviedetails/:id", element: <MovieDetailes /> },
       { path: "tvshow", element: <TvShow /> },
       { path: "people", element: <People /> },
+      { path: "peopledetailes", element: <PeopleDetailes /> },
       { path: "contact", element: <Contact /> },
       { path: "about", element: <About /> },
       { path: "*", element: <Notfound /> }

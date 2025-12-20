@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { BiSearch, BiMovie } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 
 
@@ -87,7 +88,8 @@ const Movies = () => {
 
           }
           {filterdMovies?.map((movie) => (
-            <div key={movie.id} className="bg-[#0D253F] cursor-pointer text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 duration-300">
+            <Link key={movie.id} to={`/moviedetails/${movie.id}`}>
+              <div  className="bg-[#0D253F] cursor-pointer text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 duration-300">
               <div className="m-2.5 overflow-hidden rounded-md h-80 flex justify-center items-center">
                 <img className="w-full h-64 object-cover" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
               </div>
@@ -99,6 +101,7 @@ const Movies = () => {
               </div>
 
             </div>
+            </Link>
           ))}
         </div>
         {/* Pagination  */}

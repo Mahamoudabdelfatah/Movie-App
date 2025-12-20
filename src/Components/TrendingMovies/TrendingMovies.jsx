@@ -2,6 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const TrendingMovies = () => {
 
@@ -35,18 +36,20 @@ const TrendingMovies = () => {
             </div>
             <div className='container mx-auto grid gap-6 px-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
                 {trendingMovies.map((movie) => (
-                    <div key={movie.id} className="bg-[#0D253F] cursor-pointer text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 duration-300">
-                        <div className="m-2.5 overflow-hidden rounded-md h-80 flex justify-center items-center">
-                            <img className="w-full h-64 object-cover" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-                        </div>
-                        <div className="p-4">
-                            <h4 className="text-lg font-semibold text-center">
-                                {movie.title.split(" ").slice(0, 2).join(" ")}
-                            </h4>
+                    <Link key={movie.id} to={`/moviedetails/${movie.id}`}>
+                        <div className="bg-[#0D253F] cursor-pointer text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 duration-300">
+                            <div className="m-2.5 overflow-hidden rounded-md h-80 flex justify-center items-center">
+                                <img className="w-full h-64 object-cover" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                            </div>
+                            <div className="p-4">
+                                <h4 className="text-lg font-semibold text-center">
+                                    {movie.title.split(" ").slice(0, 2).join(" ")}
+                                </h4>
+
+                            </div>
 
                         </div>
-
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

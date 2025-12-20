@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Notfound = () => {
   return (
-    <div className="h-screen flex flex-col items-center justify-center text-white px-4">
+    <div className="mt-10 flex flex-col items-center justify-center text-white px-4">
 
       <h1 className="text-9xl font-extrabold tracking-widest text-blue-600">
         404
