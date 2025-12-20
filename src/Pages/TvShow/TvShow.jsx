@@ -19,7 +19,7 @@ const TvShow = () => {
     setLoading(true)
     axios.get(url)
       .then((response) => {
-        console.log(response.data.results);
+        // console.log(response.data.results);
         setTvShow(response.data.results)
         setPage(pageNum)
         setLoading(false)
@@ -56,7 +56,7 @@ const TvShow = () => {
               <BiSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 text-2xl" />
               <input
                 type="text"
-                placeholder="Search Movies..."
+                placeholder="Search Tv Shows..."
                 className="w-full py-4 pl-14 pr-5 rounded-2xl bg-[#1b1e24] text-white 
                       placeholder:text-gray-400 focus:outline-none border border-gray-700
                       focus:border-blue-600 transition text-lg"
