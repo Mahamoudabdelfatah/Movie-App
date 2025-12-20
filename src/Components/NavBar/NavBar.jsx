@@ -8,6 +8,8 @@ import {
   Card,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import { Collapse } from "@material-tailwind/react";
+
 
 
 export function NavBar() {
@@ -94,7 +96,7 @@ export function NavBar() {
           href="#"
           className="mr-4 cursor-pointer py-1.5 text-white font-bold text-2xl"
         >
-          Nexo
+          Movie App
         </Typography>
         <div className="flex items-center gap-4">
           <div className="mr-4 hidden lg:block">{navList}</div>
@@ -153,7 +155,7 @@ export function NavBar() {
           </IconButton>
         </div>
       </div>
-      <MobileNav open={openNav}>
+      <Collapse open={openNav}>
         {navList}
         <div className="flex items-center gap-x-1">
           {/* <Button fullWidth variant="text" size="sm" className="bg-white">
@@ -163,7 +165,7 @@ export function NavBar() {
             <span>Sign in</span>
           </Button> */}
         </div>
-      </MobileNav>
+      </Collapse>
     </Navbar>
 
 
