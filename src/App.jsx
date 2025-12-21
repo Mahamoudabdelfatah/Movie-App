@@ -7,8 +7,9 @@ import TvShow from "./Pages/TvShow/TvShow"
 import People from "./Pages/People/People"
 import Contact from "./Pages/Contact/Contact"
 import About from "./Pages/About/About"
-import MovieDetailes from "./Components/MovieDetailes/MovieDetailes"
-import PeopleDetailes from "./Components/PeopleDetailes/PeopleDetailes"
+import PeopleDetailes from "./Pages/PeopleDetailes/PeopleDetailes"
+import MovieDetailes from "./Pages/MovieDetailes/MovieDetailes"
+import TvShowDetailes from "./Pages/TvShowDetailes/TvShowDetailes"
 
 
 
@@ -21,8 +22,9 @@ let routes = createBrowserRouter([
       { path: "movies", element: <Movies /> },
       { path: "moviedetails/:id", element: <MovieDetailes /> },
       { path: "tvshow", element: <TvShow /> },
+      { path: "tvshowdetailes/:id", element: <TvShowDetailes /> },
       { path: "people", element: <People /> },
-      { path: "peopledetailes", element: <PeopleDetailes /> },
+      { path: "peopledetailes/:id", element: <PeopleDetailes /> },
       { path: "contact", element: <Contact /> },
       { path: "about", element: <About /> },
       { path: "*", element: <Notfound /> }

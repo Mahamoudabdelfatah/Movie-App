@@ -2,6 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { BiSearch, BiMovie } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 
 const TvShow = () => {
@@ -79,7 +80,8 @@ const TvShow = () => {
                 </div>
               </div>}
             {filterdMovies?.map((movie) => (
-              <div key={movie.id} className='relative group w-full h-80 rounded-lg overflow-hidden shadow-lg bg-gradient-to-b from-gray-900/20 to-gray-900/60 cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl'>
+              <Link key={movie.id} to={`/tvshowdetailes/${movie.id}`}>
+                <div className='relative group w-full h-80 rounded-lg overflow-hidden shadow-lg bg-gradient-to-b from-gray-900/20 to-gray-900/60 cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl'>
                 <img
                   src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
                   alt={movie.name}
@@ -89,6 +91,7 @@ const TvShow = () => {
                   <h3 className='text-lg font-semibold'>{movie.name}</h3>
                 </div>
               </div>
+              </Link>
             ))}
 
           </div>

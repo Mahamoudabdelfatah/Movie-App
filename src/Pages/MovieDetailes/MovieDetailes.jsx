@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Button, Typography } from "@material-tailwind/react";
-import { BiSearch, BiMovie } from "react-icons/bi";
+import { BiMovie } from "react-icons/bi";
 
 const MovieDetailes = () => {
     const { id } = useParams()
@@ -13,7 +13,9 @@ const MovieDetailes = () => {
 
     function getMovieDetailes() {
         axios.get(url)
-            .then((res) => setMovieDetailes(res.data))
+            .then((response) => {
+                setMovieDetailes(response.data)
+            })
             .catch((err) => console.log(err))
     }
 
@@ -33,7 +35,7 @@ const MovieDetailes = () => {
             {/* Background */}
             <div
                 className="absolute top-0 left-0 w-full h-full bg-cover bg-center filter blur-sm brightness-50 z-0"
-                style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${movieDetailes.backdrop_path})` }}
+            // style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${movieDetailes.backdrop_path})` }}
             ></div>
 
             <div className="relative z-10 container mx-auto py-6 sm:py-12 grid md:grid-cols-2 items-center gap-6">
@@ -47,7 +49,7 @@ const MovieDetailes = () => {
                 </div>
 
                 {/* Details */}
-                <div className="flex flex-col gap-4 sm:gap-6">
+                <div className="flex flex-col gap-4 sm:gap-6 sm:px-20 px-0">
                     <Typography type="h3" className="text-2xl sm:text-3xl font-bold">{movieDetailes.title}</Typography>
 
                     {movieDetailes.tagline && (
