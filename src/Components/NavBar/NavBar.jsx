@@ -89,7 +89,7 @@ export function NavBar() {
   );
 
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-[#0D253F]">
+    <Navbar className="shadow-2xl sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-[#0D253F] border-none">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"

@@ -31,7 +31,7 @@ const TrendingMovies = () => {
         <div className='mt-10'>
             <div className='text-white text-center mb-10'>
                 <h1 className='text-4xl font-bold'>Trending Movies To Watch</h1>
-                <h1 className='text-3xl font-semibold mt-2'>Right Now</h1>
+                <h1 className='text-3xl font-semibold mt-2'>Below Now</h1>
                 <h3 className='mt-2 text-gray-300'>Most watched movies this week</h3>
             </div>
             <div className='container mx-auto grid gap-6 px-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
